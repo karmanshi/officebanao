@@ -9,31 +9,27 @@ const Navbar = () => {
         name: '',
         startDate: '',
         endDate: '',
-        code:''
-      });
-      const handleInputChange = useCallback((e) => {
+        code: ''
+    });
+    const handleInputChange = useCallback((e) => {
         setFormData((prevData) => ({
-          ...prevData,
-          [e.target.name]: e.target.value,
+            ...prevData,
+            [e.target.name]: e.target.value,
         }));
-      }, []);
-    
-      const handleSubmit = useCallback((e) => {
+    }, []);
+
+    const handleSubmit = useCallback((e) => {
         e.preventDefault();
-    
-        // Log form data to the console
         console.log('Submitted Data:', formData);
-    
-        // Reset the form fields
         setFormData({
             name: '',
             startDate: '',
             endDate: '',
-            code:''
+            code: ''
         });
-      }, [formData]);
-    
-    
+    }, [formData]);
+
+
 
 
     function closeNav() {
@@ -66,7 +62,7 @@ const Navbar = () => {
                                 <form className=" w-[100%]" onSubmit={handleSubmit}>
                                     <div className="mb-5">
                                         <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Client</label >
-                                        <select name="name" value={formData.name} onChange={handleInputChange}  id="client" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Client Name 
+                                        <select name="name" value={formData.name} onChange={handleInputChange} id="client" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Client Name 
                                         ">
                                             <option>Client Name</option>
                                             <option value="A">A</option>
@@ -77,16 +73,16 @@ const Navbar = () => {
                                     </div>
                                     <div className="mb-5">
                                         <label htmlFor="Datefcommencement" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Date of commencement</label>
-                                        <input type="date" id="Datefcommencement" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=" " required name="startDate" value={formData.startDate} onChange={handleInputChange}  />
+                                        <input type="date" id="Datefcommencement" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=" " required name="startDate" value={formData.startDate} onChange={handleInputChange} />
                                     </div>
                                     <div className="mb-5">
                                         <label htmlFor="Dateofcompletion" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Date of completion</label>
-                                        <input type="date" id="Dateofcompletion" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=" " required name="endDate" value={formData.endDate} onChange={handleInputChange}  />
+                                        <input type="date" id="Dateofcompletion" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=" " required name="endDate" value={formData.endDate} onChange={handleInputChange} />
                                     </div>
 
                                     <div className="mb-5">
                                         <label htmlFor="rfqcode" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">RFQ Code</label>
-                                        <input type="text" id="rfqcode" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="RFQ Code" required name="code" value={formData.code} onChange={handleInputChange}  />
+                                        <input type="text" id="rfqcode" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="RFQ Code" required name="code" value={formData.code} onChange={handleInputChange} />
                                     </div>
 
 
@@ -114,6 +110,6 @@ const Navbar = () => {
 
         </div>
     )
-}
+}               
 
 export default Navbar

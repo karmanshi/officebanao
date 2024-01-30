@@ -16,13 +16,6 @@ const Workorder = () => {
 
         <button className="openbtn" onClick={openNav()}>☰ Toggle Sidepanel</button>
       </div>
-
-
-
-
-
-
-
     </div>
   )
 }
